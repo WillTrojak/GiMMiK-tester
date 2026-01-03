@@ -4,9 +4,7 @@ from pyfr.backends import get_backend
 from pyfr.inifile import Inifile
 from scipy.io import mmread
 
-import argparser
-import os
-import sys
+import argparse
 from pathlib import Path
 
 
@@ -39,7 +37,7 @@ def main():
     parser.add_argument("-p", "--precision", required=True, type=str)
     parser.add_argument("-e", "--elements", required=True, type=str)
     parser.add_argument("-n", type=int, default=64)
-    parser.add_argument("dir", required=True, type=Path)
+    parser.add_argument("dir", type=Path)
 
     args = parser.parse_args()
 
